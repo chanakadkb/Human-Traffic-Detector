@@ -1,0 +1,38 @@
+<configurations>
+  <name>Human Traffic Detector</name>
+  <cameras>
+    <camera type="1" address="/media/chanaka/Chanaka2/TV Series/Game of Thrones/Season 01/gameofthrones2.mp4" id="local_cam"></camera>
+  </cameras>
+  <producer_interval>400</producer_interval>
+  <consumer_interval>300</consumer_interval>
+  <output_buf>20</output_buf>
+  <input_buf>10</input_buf>
+  <output_file>bin/output.txt</output_file>
+  <consumer_threads>1</consumer_threads>
+
+  <operate_conf>
+      <image_size x="640" y="480"></image_size>
+      <algorithm>0</algorithm>
+      <img_show>0</img_show>
+      <filter_threshol>0.8</filter_threshol>
+      <hogconf>
+        <hit_threshold>0</hit_threshold>
+        <win_stride x="5" y="15"></win_stride>
+        <padding x="20" y="60"></padding>
+        <scale>1.1</scale>
+        <final_threshold>0</final_threshold>
+      </hogconf>
+      <casecadeconf>
+          <scale_factor>1.1</scale_factor>
+          <min_neighbors>2</min_neighbors>
+          <flags>0|1</flags>
+          <minSize x="40" y="70"></minSize>
+          <maxSize x="80" y="300"></maxSize>
+          <casecade_file>resources/fullbody.xml</casecade_file>
+      </casecadeconf>
+  </operate_conf>
+</configurations>
+
+<!--<camera type="1" address="http://192.168.8.100:8089/video?x.mjpeg" id="host_cam"></camera>-->
+<!--<camera type="0" address="0" id="local_cam"></camera>-->
+<!--<camera type="1" address="resources/human2.jpg" id="local_cam"></camera>-->
