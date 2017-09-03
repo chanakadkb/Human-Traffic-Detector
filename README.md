@@ -7,3 +7,4 @@ Specifications
 - Support for all types : video, stream and images
 - HGD and Cascade classification flexibility
 - Flexibility of Configuration
+- Near real-time image processing at given frequency
